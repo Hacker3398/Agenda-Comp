@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modelo base tela login</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: var(--font-sans);
+      }
+      .phone {
+        width: 320px;
+        min-height: 620px;
+        background: #1ab3f0;
+        border-radius: 36px;
+        border: 8px solid #1a1a2e;
+        box-shadow:
+          0 0 0 2px #333,
+          0 20px 60px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        position: relative;
+        margin: 1.5rem auto;
+      }
+      .notch {
+        width: 100px;
+        height: 22px;
+        background: #1a1a2e;
+        border-radius: 0 0 18px 18px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 10;
+      }
+      .hero {
+        background: #1ab3f0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0 28px;
+      }
+      .illustration {
+        width: 200px;
+        height: 140px;
+      }
+      .card {
+        background: #fff;
+        border-radius: 28px 28px 0 0;
+        padding: 28px 24px 32px;
+        flex: 1;
+      }
+      .card-title {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 600;
+        color: #1a1a2e;
+        letter-spacing: 2px;
+        margin-bottom: 22px;
+      }
+      .label {
+        font-size: 12px;
+        font-weight: 500;
+        color: #888;
+        margin-bottom: 5px;
+        letter-spacing: 0.5px;
+      }
+      .input-wrap {
+        position: relative;
+        margin-bottom: 14px;
+      }
+      .input-icon {
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #aaa;
+        font-size: 16px;
+      }
+      .input-field {
+        width: 100%;
+        height: 42px;
+        border: 1.5px solid #e8e8e8;
+        border-radius: 10px;
+        padding: 0 12px 0 36px;
+        font-size: 13px;
+        color: #444;
+        background: #fafafa;
+        outline: none;
+        font-family: var(--font-sans);
+      }
+      .input-field::placeholder {
+        color: #bbb;
+      }
+      .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 18px;
+      }
+      .remember {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 11px;
+        color: #888;
+      }
+      .remember input {
+        accent-color: #1ab3f0;
+        width: 13px;
+        height: 13px;
+      }
+      .forgot {
+        font-size: 11px;
+        color: #1ab3f0;
+        text-decoration: none;
+      }
+      .btn-login {
+        width: 100%;
+        height: 44px;
+        background: #1ab3f0;
+        border: none;
+        border-radius: 12px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        cursor: pointer;
+        margin-bottom: 16px;
+      }
+      .signup-text {
+        text-align: center;
+        font-size: 11px;
+        color: #aaa;
+        margin-bottom: 18px;
+      }
+      .signup-text a {
+        color: #1ab3f0;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .divider {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 16px;
+      }
+      .divider-line {
+        flex: 1;
+        height: 1px;
+        background: #eee;
+      }
+      .divider-text {
+        font-size: 11px;
+        color: #bbb;
+      }
+      .social {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+      }
+      .social-btn {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        border: 1.5px solid #eee;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+      .fb {
+        color: #1877f2;
+        font-size: 18px;
+        font-weight: 700;
+        font-family: Georgia, serif;
+      }
+      .apple {
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="phone">
+      <div class="notch"></div>
+      <div class="hero">
+        <svg
+          class="illustration"
+          viewBox="0 0 200 140"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <ellipse
+            cx="100"
+            cy="125"
+            rx="75"
+            ry="12"
+            fill="rgba(255,255,255,0.15)"
+          />
+          <ellipse
+            cx="52"
+            cy="112"
+            rx="28"
+            ry="20"
+            fill="rgba(255,255,255,0.25)"
+          />
+          <ellipse
+            cx="148"
+            cy="112"
+            rx="28"
+            ry="20"
+            fill="rgba(255,255,255,0.25)"
+          />
+          <rect x="72" y="42" width="56" height="75" rx="12" fill="#d9eef7" />
+          <rect x="80" y="52" width="16" height="20" rx="2" fill="#aacfe8" />
+          <rect x="100" y="52" width="16" height="20" rx="2" fill="#aacfe8" />
+          <rect x="80" y="76" width="16" height="20" rx="2" fill="#aacfe8" />
+          <rect x="100" y="76" width="16" height="20" rx="2" fill="#aacfe8" />
+          <rect x="90" y="99" width="20" height="18" rx="3" fill="#7bbdd6" />
+          <circle cx="108" cy="42" r="16" fill="#1ab3f0" />
+          <ellipse cx="108" cy="56" rx="10" ry="4" fill="#1388b5" />
+          <rect x="103" y="34" width="10" height="12" rx="5" fill="#f5c7a0" />
+          <rect x="99" y="47" width="18" height="22" rx="4" fill="#2196f3" />
+          <rect x="99" y="47" width="8" height="22" rx="3" fill="#1976d2" />
+          <rect x="94" y="56" width="6" height="12" rx="3" fill="#f5c7a0" />
+          <rect x="117" y="56" width="6" height="12" rx="3" fill="#f5c7a0" />
+          <rect x="101" y="68" width="7" height="18" rx="3" fill="#1a1a2e" />
+          <rect x="110" y="68" width="7" height="18" rx="3" fill="#1a1a2e" />
+          <ellipse cx="102" cy="86" rx="4" ry="3" fill="#333" />
+          <ellipse cx="115" cy="86" rx="4" ry="3" fill="#333" />
+          <circle cx="114" cy="68" r="4" fill="#2196f3" />
+        </svg>
+      </div>
+      <div class="card">
+        <p class="card-title">LOGIN</p>
+        <p class="label">Username</p>
+        <div class="input-wrap">
+          <i class="ti ti-mail input-icon" aria-hidden="true"></i>
+          <input class="input-field" type="email" placeholder="@mail.com" />
+        </div>
+        <p class="label">Password</p>
+        <div class="input-wrap">
+          <i class="ti ti-lock input-icon" aria-hidden="true"></i>
+          <input class="input-field" type="password" placeholder="password" />
+        </div>
+        <div class="row">
+          <label class="remember"><input type="checkbox" /> Remember me</label>
+          <a class="forgot" href="#">Esqueceu a Senha?</a>
+        </div>
+        <button class="btn-login">Entrar</button>
+        <p class="signup-text">
+          Não Tem Uma Conta? <a href="#">Inscrever-se</a>
+        </p>
+        <div class="divider">
+          <div class="divider-line"></div>
+          <span class="divider-text">Logar Com</span>
+          <div class="divider-line"></div>
+        </div>
+        <div class="social">
+          <div class="social-btn"><span class="fb">f</span></div>
+          <div class="social-btn">
+            <svg width="18" height="18" viewBox="0 0 18 18">
+              <path
+                d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.716v2.259h2.908c1.702-1.567 2.684-3.875 2.684-6.615z"
+                fill="#4285F4"
+              />
+              <path
+                d="M9 18c2.43 0 4.467-.806 5.956-2.184l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332C2.438 15.983 5.482 18 9 18z"
+                fill="#34A853"
+              />
+              <path
+                d="M3.964 10.706c-.18-.54-.282-1.117-.282-1.706s.102-1.166.282-1.706V4.962H.957C.347 6.175 0 7.548 0 9s.347 2.825.957 4.038l3.007-2.332z"
+                fill="#FBBC05"
+              />
+              <path
+                d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0 5.482 0 2.438 2.017.957 4.962L3.964 7.294C4.672 5.167 6.656 3.58 9 3.58z"
+                fill="#EA4335"
+              />
+            </svg>
+          </div>
+          <div class="social-btn">
+            <span class="apple" style="font-size: 20px">&#63743;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
